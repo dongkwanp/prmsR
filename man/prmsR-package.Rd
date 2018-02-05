@@ -8,3 +8,7 @@
 \description{
 Maintained by Hydrosystems Research Group at University of Massachusetts Amherst.
 }
+\details{
+prmsR is a small internal library that operates as a wrapper, parser, and file generator
+for the PRMS-IV model by USGS.
+}

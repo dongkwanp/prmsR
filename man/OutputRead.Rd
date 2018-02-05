@@ -7,7 +7,7 @@
 OutputRead(output.filepath = paste0(getwd(), "/output/output.statvar"))
 }
 \arguments{
-\item{output.filepath}{Output file path to read in}
+\item{output.filepath}{Output file path to read in (unit is probably cfs)}
 }
 \value{
 output.output
