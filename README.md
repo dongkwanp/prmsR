@@ -3,8 +3,9 @@ prmsR
 
 `prmsR` is a R wrapper of USGS's [Precipitation Runoff Modelling System
 (PRMS)](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html) intended
-to be used by University of Massachusetts Amherst Hydrosystems Research
-Group. The function of this library is to:
+to be used by [University of Massachusetts Amherst Hydrosystems Research
+Group](http://blogs.umass.edu/hydrosystems/). The function of this
+library is to:
 
 1.  Integrate the PRMS Model within R's data and file systems
 2.  Easier parallel computing runs of PRMS
