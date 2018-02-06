@@ -18,7 +18,19 @@ works. Like magic.
 Installation Instructions
 -------------------------
 
-Not publically available currently (Fix this later).
+Installation of `prmsR` can be done through the git repository. Note
+that the git repository is currently private. Therefore, credentials are
+needed.
+
+    install.packages('devtools')
+    devtools::install_git('https://git.donpark.me/donpark/prmsR.git', credentials = '<CredentialsHere>')
+
+How to Use
+----------
+
+Call the library using the following command.
+
+    library('prmsR')
 
 Acknowledgements
 ----------------
