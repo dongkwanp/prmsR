@@ -23,7 +23,7 @@ that the git repository is currently private. Therefore, credentials are
 needed.
 
     install.packages('devtools')
-    devtools::install_git('https://git.donpark.me/donpark/prmsR.git', credentials = '<CredentialsHere>')
+    devtools::install_git('https://git.donpark.me/donpark/prmsR.git')
 
 How to Use
 ----------
