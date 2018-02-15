@@ -19,11 +19,11 @@ Installation Instructions
 -------------------------
 
 Installation of `prmsR` can be done through the git repository. Note
-that the git repository is currently private. Therefore, credentials are
-needed.
+that the git repository is currently public but unlisted. Therefore,
+credentials are no longer needed to access the repository.
 
     install.packages('devtools')
-    devtools::install_git('https://git.donpark.me/donpark/prmsR.git', credentials = '<CredentialsHere>')
+    devtools::install_git('https://git.donpark.me/donpark/prmsR.git')
 
 How to Use
 ----------
