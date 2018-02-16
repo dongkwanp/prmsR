@@ -35,7 +35,4 @@ Call the library using the following command.
 Acknowledgements
 ----------------
 
-I'd like to say thanks to coffee, coffee, liquor, and coffee. Oh and the
-following comic summarizes my Academic aspirations.
-
-![](README_files/mylife.gif)
+I'd like to say thanks to coffee, coffee, and coffee. Oh and people.
