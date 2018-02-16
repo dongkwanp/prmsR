@@ -47,13 +47,13 @@ ParamWrite <- function(prms.param.values, param.path) {
 
       cat(paste('####', ls(prms.param.values$param[i]), prms.param.values$param[[i]][1], "", sep = "\n"), file = param.path, append = TRUE)
 
-      cat(paste(prms.param.values$param[[i]][[2]], "", collapse = "\n"), file = param.path, append = TRUE)
+      cat(paste(prms.param.values$param[[i]][[2]], collapse = "\n"), file = param.path, append = TRUE)
 
       cat('\n', file = param.path, append = TRUE)
 
       cat(paste(prms.param.values$param[[i]][3], prms.param.values$param[[i]][4], "", sep = "\n"), file = param.path, append = TRUE)
 
-      cat(paste(prms.param.values$param[[i]][[5]], "", collapse = '\n'), file = param.path, append = TRUE)
+      cat(paste(prms.param.values$param[[i]][[5]], collapse = '\n'), file = param.path, append = TRUE)
 
       cat('\n', file = param.path, append = TRUE)
 
