@@ -31,8 +31,3 @@ How to Use
 Call the library using the following command.
 
     library('prmsR')
-
-Acknowledgements
-----------------
-
-I'd like to say thanks to coffee, coffee, and coffee. Oh and people.
