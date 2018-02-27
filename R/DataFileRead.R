@@ -28,7 +28,7 @@ DataFileRead <- function(datainput.path) {
     # Comment Section
     if (substr(temp.line, start = 1, stop = 2) == '//') {
 
-      output$comment[commentlinecounter] <- temp.line
+      output$meta$comment[commentlinecounter] <- temp.line
       commentlinecounter <- commentlinecounter + 1
 
       next
