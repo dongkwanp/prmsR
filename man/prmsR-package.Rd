@@ -12,3 +12,7 @@ Maintained by Hydrosystems Research Group at University of Massachusetts Amherst
 prmsR is a small internal library that operates as a wrapper, parser, and file generator
 for the PRMS-IV model by USGS.
 }
+\author{
+\strong{Maintainer}: Don Park \email{donpark@umass.edu}
+
+}
