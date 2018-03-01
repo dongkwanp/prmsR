@@ -12,8 +12,7 @@ library is to:
 3.  ????
 4.  Profit
 
-If something breaks. Don't ask Don. He doesn't know. It just somehow
-works. Like magic.
+Questions? Comments? Concerns? Contact [Don](mailto:donpark@umass.edu).
 
 Dependencies
 ------------
