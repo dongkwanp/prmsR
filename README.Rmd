@@ -30,7 +30,7 @@ library('tidyr')
 
 ## Installation Instructions
 
-Installation of `prmsR` can be done through the git repository.  Note that the git repository is currently public but unlisted.  Therefore, credentials are no longer needed to access the repository.
+Installation of `prmsR` can be done through the git repository.  Note that the git repository is currently public but unlisted.  
 
 ```
 install.packages('devtools')
