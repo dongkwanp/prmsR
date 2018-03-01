@@ -15,6 +15,17 @@ library is to:
 If something breaks. Don't ask Don. He doesn't know. It just somehow
 works. Like magic.
 
+Dependencies
+------------
+
+`prmsR` doesn't really require many dependencies besides for having the
+`prms` model binary (which can be obtained
+[here](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html)). However,
+it also requires the `tidyr` library. This can be installed by:
+
+    install.packages('tidyr')
+    library('tidyr')
+
 Installation Instructions
 -------------------------
 
@@ -31,3 +42,4 @@ How to Use
 Call the library using the following command.
 
     library('prmsR')
+    library('tidyr')
