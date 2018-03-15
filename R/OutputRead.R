@@ -1,6 +1,6 @@
 #' Parse and Read-In Statvar Output file
 #'
-#' @param output.filepath Output file path to read in (unit is probably cfs)
+#' @param output.filepath Output file path to read in
 #'
 #' @return output.output
 #' @export
