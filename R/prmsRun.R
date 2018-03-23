@@ -10,6 +10,6 @@
 
 prmsRun <- function(binary.filepath, control.filepath) {
 
-  system(paste(binary.filepath, control.filepath, sep = " "))
+  system(paste(binary.filepath, control.filepath, sep = " "), intern = TRUE)
 
 }
