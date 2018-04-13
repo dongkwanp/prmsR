@@ -32,7 +32,7 @@ Installation of `prmsR` can be done through the git repository. Note
 that the git repository is currently public but unlisted.
 
     install.packages('devtools')
-    devtools::install_git('https://git.donpark.me/donpark/prmsR.git')
+    devtools::install_git('https://projects.cloudwaterlab.com/UMass/prmsR.git')
 
 How to Use
 ----------
