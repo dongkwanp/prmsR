@@ -61,7 +61,6 @@ Call the library using the following command.
 
 ```
 library('prmsR')
-library('tidyr')
 ```
 
 
