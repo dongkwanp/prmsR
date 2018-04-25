@@ -17,11 +17,10 @@ Dependencies
 
 `prmsR` doesn't really require many dependencies besides for having the
 `prms` model binary (which can be obtained
-[here](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html)). However,
-it also requires the `tidyr` library. This can be installed by:
+[here](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html)). The
+library also requires the `tidyr` library. `tidyr` can be installed by:
 
     install.packages('tidyr')
-    library('tidyr')
 
 Installation Instructions
 -------------------------
