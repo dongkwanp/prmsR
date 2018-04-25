@@ -28,11 +28,36 @@ it also requires the `tidyr` library. This can be installed by:
 Installation Instructions
 -------------------------
 
-Installation of `prmsR` can be done through the git repository. Note
-that the git repository is currently public but unlisted.
+`prmsR` is in constant development. Therefore, using the most up-to-date
+version of the library is recommended. However, as `prmsR` currently is
+in an internal repository that requires authentication, there are some
+additional steps required before using it. This library can be accessed
+via HTTPS or SSH. Both options are outlined below. You only need to
+follow one method that works for you.
 
-    install.packages('devtools')
-    devtools::install_git('https://projects.cloudwaterlab.com/UMass/prmsR.git')
+### Access via HTTPS
+
+Change `<username>` with your GitLab username and execute the following
+lines of code to download the latest version of `prmsR`.
+
+    install.packages(c('devtools', 'getPass', 'git2r'))
+    devtools::install_git(
+      'https://projects.cloudwaterlab.com/UMass/prmsR.git', 
+      credentials = git2r::cred_user_pass('<username>', getPass::getPass())
+    )
+
+### Access via SSH
+
+Placing your [Public SSH
+Key](https://projects.cloudwaterlab.com/profile/keys) into our system
+first is necessary in order to access the Git repository. Replace the
+location of `id_rsa.pub` and `id_rsa` with known locations.
+
+    install.packages(c('git2r', 'devtools'))
+    creds = git2r::cred_ssh_key("~\\.ssh\\id_rsa.pub",
+                                "~\\.ssh\\id_rsa")
+    devtools::install_git("git@projects.cloudwaterlab.com:UMass/prmsR.git",
+                          credentials = creds)
 
 How to Use
 ----------
