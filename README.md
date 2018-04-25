@@ -61,3 +61,12 @@ How to Use
 Call the library using the following command.
 
     library('prmsR')
+
+Troubleshooting
+---------------
+
+`prmsR` has been tested and is in regular use on the Linux environment.
+However, the code should be platform neutral and work with Windows or
+MacOS systems as well. If there are any issues or problems, feel free to
+open an issue in our [issue
+tracker](https://projects.cloudwaterlab.com/UMass/prmsR/issues).
