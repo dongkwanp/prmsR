@@ -8,9 +8,7 @@ Group](http://blogs.umass.edu/hydrosystems/). The function of this
 library is to:
 
 1.  Integrate the PRMS Model within R's data and file systems
-2.  Easier parallel computing runs of PRMS
-3.  ????
-4.  Profit
+2.  The ability for easier parallel computing runs of PRMS
 
 Questions? Comments? Concerns? Contact [Don](mailto:donpark@umass.edu).
 
