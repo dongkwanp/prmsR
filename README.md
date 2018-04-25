@@ -27,9 +27,9 @@ Installation Instructions
 `prmsR` is in constant development. Therefore, using the most up-to-date
 version of the library is recommended. However, as `prmsR` currently is
 in an internal repository that requires authentication, there are some
-additional steps required before using it. This library can be accessed
-via HTTPS or SSH. Both options are outlined below. You only need to
-follow one method that works for you.
+additional steps required before accessing it. This library can be
+accessed via HTTPS or SSH. Both options are outlined below. You only
+need to follow one method that works for you.
 
 ### Access via HTTPS
 
