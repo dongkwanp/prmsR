@@ -53,7 +53,7 @@ DataFileRead <- function(datainput.path) {
   ## Data Section
 
   output$data <- read.table(datainput.path, header = FALSE, sep = " ", skip = linecounter)
-  output$data <- unite(output$data, 'Date', c('V1', 'V2', 'V3'))
+  output$data <- tidyr::unite(output$data, 'Date', c('V1', 'V2', 'V3'))
   output$data$Date <- as.Date(output$data$Date, '%Y_%m_%d')
 
   return(output)
