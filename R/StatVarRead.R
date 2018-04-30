@@ -5,7 +5,7 @@
 #' @return output.output
 #' @export
 
-OutputRead <- function(output.filepath = paste0(getwd(), '/output/output.statvar')) {
+StatVarRead <- function(output.filepath = paste0(getwd(), '/output/output.statvar')) {
 
   # Determining Header Names
   conOutputFile <- file(output.filepath, open = 'r')
