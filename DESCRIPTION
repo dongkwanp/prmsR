@@ -6,8 +6,8 @@ Author: Don Park
 Maintainer: Don Park <donpark@umass.edu>
 Authors@R: person("Don", "Park", email = "donpark@umass.edu",
                   role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: prmsR is a wrapper function around the PRMS hydrologic model
+    maintained by the USGS.  
 Depends: R (>= 3.1.0)
 License: MIT
 Encoding: UTF-8
