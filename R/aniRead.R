@@ -24,6 +24,8 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
 
 
 
+    functiona <- 'disc golf'
+
   }
 
 
