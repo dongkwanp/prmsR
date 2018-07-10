@@ -9,12 +9,11 @@
 
 aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')) {
 
-  # Determining Header Names
   conOutputFile <- file(output.filepath, open = 'r')
 
   lineCounter <- 1
 
-  while (TRUE) # Better convention suggested
+  while (TRUE) # Probably could be better
     {
 
     fileLine <- readLines(conOutputFile, n = 1)
@@ -27,7 +26,6 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
     else break
   }
 
-  # Delineate Headers
   headers <- unlist(strsplit(fileLine, split = '\t'))
   lineCounter <- lineCounter + 1
   characterbreakdown <- unlist(strsplit(readLines(conOutputFile, n = 1), split = '\t'))
