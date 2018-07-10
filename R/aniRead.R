@@ -51,7 +51,5 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
 
   }
 
-
-
   return(output.output)
 }
