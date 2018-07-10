@@ -12,58 +12,30 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
   # Determining Header Names
   conOutputFile <- file(output.filepath, open = 'r')
 
-  fileraw <- readLines(conOutputFile)
-
-  close(conOutputFile)
-
   lineCounter <- 1
-
-  skip <- TRUE
-
-  while (skip) {
-
-
-
-    functiona <- 'disc golf'
-
-  }
-
 
   while (skip) {
 
     fileLine <- readLines(conOutputFile, n = 1)
 
     if (substr(fileLine, 1, 1) == '#') {
+      lineCounter <- lineCounter + 1
       next
-    } else {
-      break
     }
+
+    else break
   }
 
-
-
-
-
-  skiplength <- readLines(conOutputFile, n = 1)
-
-  listnames <- rep(NA, skiplength)
-
-  for (i in 1:skiplength) {
-
-    listnames[i] <- gsub("([A-Za-z]+_[A-Za-z]+).*", "\\1", readLines(conOutputFile, n = 1))
-
-  }
+  # Delineate Headers
+  headers <- unlist(strsplit(fileLine, split = '\t'))
+  lineCounter <- lineCounter + 1
+  characterbreakdown <- unlist(strsplit(readLines(conOutputFile, n = 1), split = '\t'))
 
   close(conOutputFile)
 
-  # Generating Header Names
-  column.names <- append(c('Timestep', 'Year', 'Month', 'Day', 'Hour', 'Min', 'Sec', 'NA'), listnames, after = 7)
+  import.data <- read.csv(output.filepath, header = FALSE, sep = "", skip = lineCounter, col.names = headers)
 
-  rawimport <- read.csv(output.filepath, header = FALSE, sep = " ", skip = (skiplength + 1), col.names = column.names)
+  import.data$timestamp <- as.Date(import.data$timestamp, "%Y-%m-%d")
 
-  Date <- as.Date(paste(rawimport$Year, rawimport$Month, rawimport$Day, sep = "-"), "%Y-%m-%d")
-
-  output.output <- data.frame(Date, rawimport[ ,8:(length(column.names) - 1)])
-
-  return(output.output)
+  return(import.data)
 }
