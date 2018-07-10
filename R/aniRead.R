@@ -14,7 +14,8 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
 
   lineCounter <- 1
 
-  while (skip) {
+  while (TRUE) # Better convention suggested
+    {
 
     fileLine <- readLines(conOutputFile, n = 1)
 
@@ -35,7 +36,22 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
 
   import.data <- read.csv(output.filepath, header = FALSE, sep = "", skip = lineCounter, col.names = headers)
 
-  import.data$timestamp <- as.Date(import.data$timestamp, "%Y-%m-%d")
+  output.output <- list()
 
-  return(import.data)
+
+  for (i in 1:max(import.data$nhru)) {
+
+    temp.ts <- dplyr::filter(import.data, get(headers[2]) == i)
+    temp.ts <- temp.ts[,-2]
+    temp.ts$timestamp <- as.Date(temp.ts$timestamp, '%Y-%m-%d')
+
+    listname <- paste0(headers[2], i)
+
+    output.output[[listname]] <- temp.ts
+
+  }
+
+
+
+  return(output.output)
 }
