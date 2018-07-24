@@ -31,8 +31,7 @@ one method that works for you.
 
 ### Access via HTTPS
 
-Change `<username>` with your GitLab username and execute the following
-lines of code to download the latest version of `prmsR`.
+Within R, execute the following lines in order to install `prmsR`.
 
     install.packages(c('devtools', 'git2r'))
     devtools::install_git('https://projects.cloudwaterlab.com/UMass/prmsR.git')
