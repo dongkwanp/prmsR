@@ -36,7 +36,6 @@ lines of code to download the latest version of `prmsR`.
 
     install.packages(c('devtools', 'git2r'))
     devtools::install_git('https://projects.cloudwaterlab.com/UMass/prmsR.git')
-    )
 
 ### Access via SSH
 
