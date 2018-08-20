@@ -37,9 +37,9 @@ aniRead <- function(output.filepath = paste0(getwd(), '/output/output.out.nsub')
   output.output <- list()
 
 
-  for (i in 0:max(import.data$nhru)) {
+  for (i in 1:max(import.data$nhru)) {
 
-    temp.ts <- dplyr::filter(import.data, get(headers[2]) == (i + 1))
+    temp.ts <- dplyr::filter(import.data, get(headers[2]) == (i))
     temp.ts <- temp.ts[,-2]
     temp.ts$timestamp <- as.Date(temp.ts$timestamp, '%Y-%m-%d')
 
