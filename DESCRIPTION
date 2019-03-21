@@ -1,7 +1,7 @@
 Package: prmsR
 Type: Package
 Title: Operates as a R wrapper for USGS PRMS-IV
-Version: 0.4.0
+Version: 0.4.1
 Author: Don Park
 Maintainer: Don Park <donpark@umass.edu>
 Authors@R: person("Don", "Park", email = "donpark@umass.edu",
