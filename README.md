@@ -1,13 +1,13 @@
 prmsR
 -----
 
-`prmsR` is a R wrapper of USGS's [Precipitation Runoff Modelling System
+`prmsR` is a R wrapper of USGS’s [Precipitation Runoff Modelling System
 (PRMS)](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html) intended
 to be used by [University of Massachusetts Amherst Hydrosystems Research
 Group](http://blogs.umass.edu/hydrosystems/). The function of this
 library is to:
 
-1.  Integrate the PRMS Model within R's data and file systems
+1.  Integrate the PRMS Model within R’s data and file systems
 2.  The ability for easier parallel computing runs of PRMS
 
 Questions? Comments? Concerns? Contact [Don](mailto:donpark@umass.edu).
@@ -15,11 +15,15 @@ Questions? Comments? Concerns? Contact [Don](mailto:donpark@umass.edu).
 Dependencies
 ------------
 
-`prmsR` doesn't really require many dependencies besides for having the
-`prms` model binary (which can be obtained
-[here](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html)). `prmsR`
-also requires the `tidyr` library. However, this is automatically
-installed through the `prmsR` installation process.
+`prmsR` will automatically install the required dependencies when
+installed. However, manual installation of dependencies are possible by
+executing the following command:
+
+    install.packages('tidyr')
+
+In addition, the `prms` binary (which can be obtained
+[here](https://www.usgs.gov/software/precipitation-runoff-modeling-system-prms-0))
+is necessary.
 
 Installation Instructions
 -------------------------
