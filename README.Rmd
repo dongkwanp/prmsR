@@ -20,7 +20,13 @@ Questions?  Comments?  Concerns?  Contact [Don](mailto:donpark@umass.edu).
 
 ## Dependencies
 
-`prmsR` doesn't really require many dependencies besides for having the `prms` model binary (which can be obtained [here](https://wwwbrr.cr.usgs.gov/projects/SW_MoWS/PRMS.html)).  `prmsR` also requires the `tidyr` library.  However, this is automatically installed through the `prmsR` installation process.  
+`prmsR` will automatically install the required dependencies when installed.  However, manual installation of dependencies are possible by executing the following command:
+
+```
+install.packages('tidyr')
+```
+
+In addition, the `prms` binary (which can be obtained [here](https://www.usgs.gov/software/precipitation-runoff-modeling-system-prms-0)) is necessary.   
 
 ## Installation Instructions
 
