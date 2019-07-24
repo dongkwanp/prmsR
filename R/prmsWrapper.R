@@ -7,16 +7,18 @@
 #' @param input.Control Inputs Control Variable for prmsR
 #' @param input.Param Inputs Parameter Variable for prmsR
 #' @param input.Data Inputs Data Variable for prmsR
+#' @param input.removeAni removes ANI file after running (if applicable)
 #'
 #' @return output.prmsstatvar Outputs StatVar of PRMS Model
 #' @export
 
-prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, input.Param, input.Data, input.removeFile = TRUE) {
+prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, input.Param, input.Data, input.removeAni = TRUE) {
 
   # Establishing base path
   base.outputdirectorypath <- paste(meta.baseDirectory, 'output', sep = '/')
   base.inputdirectorypath <- paste(meta.baseDirectory, 'input', sep = '/')
-  base.output.statVarFilepath <- paste(base.outputdirectorypath, 'outputstatvar.statvar', sep = '/')
+  base.output.statVarFilepath <- paste(base.outputdirectorypath, 'statvaroutput.statvar', sep = '/')
+  base.output.aniFilepath <- paste(base.outputdirectorypath, 'anioutput.out', sep = '/')
 
   # Establishing relative path for input files
   base.input.dataFilePath <- paste(base.inputdirectorypath, 'DataFile.Data', sep = '/')
@@ -28,7 +30,7 @@ prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, inpu
   dir.create(base.inputdirectorypath, recursive = TRUE)
 
   # Modifying Control File for relative path
-  input.Control$ani_output_file[[3]] <- paste(base.outputdirectorypath, 'output.out', sep = '/')
+  input.Control$ani_output_file[[3]] <- base.output.aniFilepath
   input.Control$model_output_file[[3]] <- paste(base.outputdirectorypath, 'outputsummary.txt', sep = '/')
   input.Control$stat_var_file[[3]] <- base.output.statVarFilepath
   input.Control$stats_output_file[[3]] <- paste(base.outputdirectorypath, 'outputwb.wb', sep = '/')
@@ -51,6 +53,14 @@ prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, inpu
 
   # Reading in StatVar File
   output.prmsstatvar <- prmsR::StatVarRead(base.output.statVarFilepath)
+
+  # Reading in Ani File
+  #output.prmsanifile <- prmsR::aniRead()
+
+  output <- list()
+
+  output$statvar <- output.prmsstatvar
+  # output$ani <- output.prmsanifile
 
   ### Deleting files left by PRMS
   try(file.remove(c('gwflow.wbal', 'intcp.wbal', 'PRMS-IV.log', 'save_vars', 'snowcomp.wbal', 'soilzone.wbal', 'srunoff_smidx.wbal', 'wbal.msgs'), showWarnings = FALSE))
