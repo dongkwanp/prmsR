@@ -63,7 +63,9 @@ library('prmsR')
 `prmsR` has been tested and is in regular use on the Linux environment.  However, the code should be platform neutral and work with Windows or MacOS systems as well.  If there are any issues or problems, feel free to open an issue in our [issue tracker](https://projects.cloudwaterlab.com/UMass/prmsR/issues).  
 
 
+## PRMS Questions
 
+The USGS has a copy of the [PRMS-IV manual](https://pubs.er.usgs.gov/publication/tm6B7) available on their site.  
 
 
 
