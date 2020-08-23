@@ -15,15 +15,15 @@
 prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, input.Param, input.Data, input.removeAni = TRUE) {
 
   # Establishing base path
-  base.outputdirectorypath <- paste(meta.baseDirectory, 'output', sep = '/')
-  base.inputdirectorypath <- paste(meta.baseDirectory, 'input', sep = '/')
-  base.output.statVarFilepath <- paste(base.outputdirectorypath, 'statvaroutput.statvar', sep = '/')
-  base.output.aniFilepath <- paste(base.outputdirectorypath, 'anioutput.out', sep = '/')
+  base.outputdirectorypath <- file.path(meta.baseDirectory, 'output')
+  base.inputdirectorypath <- file.path(meta.baseDirectory, 'input')
+  base.output.statVarFilepath <- file.path(base.outputdirectorypath, 'statvaroutput.statvar')
+  base.output.aniFilepath <- file.path(base.outputdirectorypath, 'anioutput.out')
 
   # Establishing relative path for input files
-  base.input.dataFilePath <- paste(base.inputdirectorypath, 'DataFile.Data', sep = '/')
-  base.input.paramFilePath <- paste(base.inputdirectorypath, 'Paramfile.params', sep = '/')
-  base.input.controlFilePath <- paste(base.inputdirectorypath, 'Control.control', sep = '/')
+  base.input.dataFilePath <- file.path(base.inputdirectorypath, 'DataFile.Data')
+  base.input.paramFilePath <- file.path(base.inputdirectorypath, 'Paramfile.params')
+  base.input.controlFilePath <- file.path(base.inputdirectorypath, 'Control.control')
 
   # Creating Folders
   dir.create(base.outputdirectorypath, recursive = TRUE)
@@ -31,9 +31,9 @@ prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, inpu
 
   # Modifying Control File for relative path
   input.Control$ani_output_file[[3]] <- base.output.aniFilepath
-  input.Control$model_output_file[[3]] <- paste(base.outputdirectorypath, 'outputsummary.txt', sep = '/')
+  input.Control$model_output_file[[3]] <- file.path(base.outputdirectorypath, 'outputsummary.txt')
   input.Control$stat_var_file[[3]] <- base.output.statVarFilepath
-  input.Control$stats_output_file[[3]] <- paste(base.outputdirectorypath, 'outputwb.wb', sep = '/')
+  input.Control$stats_output_file[[3]] <- file.path(base.outputdirectorypath, 'outputwb.wb')
   input.Control$data_file[[3]] <- base.input.dataFilePath
   input.Control$param_file[[3]] <- base.input.paramFilePath
 
@@ -49,7 +49,7 @@ prmsWrapper <- function(prms.binaryPath, meta.baseDirectory, input.Control, inpu
 
 
   # Running Hydrologic Model
-  capture.output(prmsR::prmsRun(prms.binaryPath, base.input.controlFilePath), file = paste(meta.baseDirectory, 'PRMSRun.log', sep = '/'), append = FALSE, type = c('output', 'message'))
+  capture.output(prmsR::prmsRun(prms.binaryPath, base.input.controlFilePath), file = file.path(meta.baseDirectory, 'PRMSRun.log'), append = FALSE, type = c('output', 'message'))
 
   # Reading in StatVar File
   output.prmsstatvar <- prmsR::StatVarRead(base.output.statVarFilepath)
