@@ -10,7 +10,7 @@ library is to:
 1.  Integrate the PRMS Model within R’s data and file systems
 2.  The ability for easier parallel computing runs of PRMS
 
-Questions? Comments? Concerns? Contact [Don](mailto:donpark@umass.edu).
+Questions? Comments? Concerns? Submit an issue.
 
 Dependencies
 ------------
@@ -38,12 +38,12 @@ one method that works for you.
 Within R, execute the following lines in order to install `prmsR`.
 
     install.packages(c('devtools', 'git2r'))
-    devtools::install_git('https://projects.cloudwaterlab.com/UMass/prmsR.git')
+    devtools::install_git('https://github.com/dongkwanp/prmsR.git')
 
 ### Access via SSH
 
     install.packages(c('git2r', 'devtools'))
-    devtools::install_git("git@projects.cloudwaterlab.com:UMass/prmsR.git")
+    devtools::install_git("git@github.com:dongkwanp/prmsR.git")
 
 How to Use
 ----------
@@ -59,7 +59,7 @@ Troubleshooting
 However, the code should be platform neutral and work with Windows or
 MacOS systems as well. If there are any issues or problems, feel free to
 open an issue in our [issue
-tracker](https://projects.cloudwaterlab.com/UMass/prmsR/issues).
+tracker](https://github.com/dongkwanp/prmsR/issues).
 
 PRMS Questions
 --------------
